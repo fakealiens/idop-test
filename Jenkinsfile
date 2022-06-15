@@ -3,7 +3,7 @@ agent any
 stages {
 stage("Creating Inventory") {
 steps {
-dir("${WORKSPACE}/${BUILD_NUMBER}"){ 
+dir("${WORKSPACE}/}"){ 
 sh 'echo "localhost" > hosts'
 }}}
 stage("Executing scripts"){
