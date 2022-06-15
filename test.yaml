@@ -1,0 +1,9 @@
+---
+- name: Install and start Apache HTTPD
+  hosts: all 
+  vars:
+    ansible_connection: local
+  tasks:
+  - name: httpd package is present
+    debug:
+     msg: 'hello world'
