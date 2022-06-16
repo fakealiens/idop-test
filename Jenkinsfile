@@ -11,6 +11,7 @@ steps {
 dir("${WORKSPACE}/"){
 sh '''
 cp test.yaml "${WORKSPACE}/${BUILD_NUMBER}/"
-/usr/bin/ansible-playbook "${WORKSPACE}/${BUILD_NUMBER}"/test.yaml'
+/usr/bin/ansible-playbook "${WORKSPACE}/${BUILD_NUMBER}"/test.yaml
+'''
 }}}
 }}
