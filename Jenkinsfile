@@ -9,6 +9,8 @@ steps {
 stage("Executing scripts"){
 steps {
 dir("${WORKSPACE}/"){
-sh '/usr/bin/ansible-playbook "${WORKSPACE}/${BUILD_NUMBER}"/test.yaml'
+sh '''
+cp test.yaml "${WORKSPACE}/${BUILD_NUMBER}/"
+/usr/bin/ansible-playbook "${WORKSPACE}/${BUILD_NUMBER}"/test.yaml'
 }}}
 }}
